@@ -1,0 +1,22 @@
+﻿@model IEnumerable<JsonApiClient.Models.Person>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    @foreach (var person in Model)
+    {
+        <div class="row">
+            <div class="col-sm-6">
+                @Html.DisplayFor(modelItem => person.Id)
+            </div>
+            <div class="col-sm-6">
+                @Html.DisplayFor(modelItem => person.name)
+            </div>
+        </div>
+    }
+</div>
+
+<div>
+    <a class="btn btn-primary" role="button" asp-controller="Home" asp-action="PostRandomPerson">Post a new person!</a>
+</div>

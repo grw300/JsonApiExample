@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonApi", "JsonApi\JsonApi.csproj", "{ABAFC036-D36C-4CED-9DA4-67119D2BE692}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonApi", "JsonApi\JsonApi.csproj", "{ABAFC036-D36C-4CED-9DA4-67119D2BE692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonApiClient", "JsonApiClient\JsonApiClient.csproj", "{8DD3175A-89D5-4259-840A-2C7B98C1F974}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{ABAFC036-D36C-4CED-9DA4-67119D2BE692}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABAFC036-D36C-4CED-9DA4-67119D2BE692}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABAFC036-D36C-4CED-9DA4-67119D2BE692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD3175A-89D5-4259-840A-2C7B98C1F974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD3175A-89D5-4259-840A-2C7B98C1F974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD3175A-89D5-4259-840A-2C7B98C1F974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD3175A-89D5-4259-840A-2C7B98C1F974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
