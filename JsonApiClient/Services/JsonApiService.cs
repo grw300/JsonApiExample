@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using JsonApiClient.Models;
 using System.IO;
 using System.Text;
+using JsonApiSerializer.JsonApi;
 
 namespace JsonApiClient.Services
 {
@@ -44,7 +45,14 @@ namespace JsonApiClient.Services
         {
             var person = new Person()
             {
-                name = Path.GetRandomFileName()
+                Name = Path.GetRandomFileName(),
+                Parent = new Relationship<Parent>()
+                {
+                    Data = new Parent()
+                    {
+                        Name = Path.GetRandomFileName()
+                    }
+                }
             };
 
             var jsonContent = JsonConvert.SerializeObject(person, jsonApiSettings);

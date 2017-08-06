@@ -4,14 +4,28 @@
 }
 
 <div class="container">
+	<div class="row">
+	    <div class="col-sm-4">
+			Id
+		</div>
+		<div class="col-sm-4">
+			Name
+		</div>
+        <div class="col-sm-4">
+			Parent
+		</div>
+    </div>
     @foreach (var person in Model)
     {
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 @Html.DisplayFor(modelItem => person.Id)
             </div>
-            <div class="col-sm-6">
-                @Html.DisplayFor(modelItem => person.name)
+            <div class="col-sm-4">
+                @Html.DisplayFor(modelItem => person.Name)
+            </div>
+		    <div class="col-sm-4">
+                @Html.DisplayFor(modelItem => person.Parent.Data.Name)
             </div>
         </div>
     }

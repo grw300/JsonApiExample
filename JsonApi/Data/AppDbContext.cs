@@ -13,5 +13,6 @@ namespace JsonApi.Data
             : base(options) { }
 
         public DbSet<Person> People { get; set; }
+        public DbSet<Parent> Parents { get; set; }
     }
 }
