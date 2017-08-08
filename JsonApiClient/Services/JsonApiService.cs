@@ -43,15 +43,25 @@ namespace JsonApiClient.Services
 
         public async Task<Person> PostPersonAsync()
         {
+            var parent = new Parent()
+            {
+                Name = Path.GetRandomFileName()
+            };
+
+            var parentJson = JsonConvert.SerializeObject(parent, jsonApiSettings);
+            var parentPost = new StringContent(parentJson);
+            parentPost.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/vnd.api+json");
+
+            var parentResponse = await httpClient.PostAsync("Parents", parentPost);
+            var parentContent = await parentResponse.Content.ReadAsStringAsync();
+            var newParent = JsonConvert.DeserializeObject<Parent>(parentContent, jsonApiSettings);
+
             var person = new Person()
             {
                 Name = Path.GetRandomFileName(),
                 Parent = new Relationship<Parent>()
                 {
-                    Data = new Parent()
-                    {
-                        Name = Path.GetRandomFileName()
-                    }
+                    Data = newParent
                 }
             };
 

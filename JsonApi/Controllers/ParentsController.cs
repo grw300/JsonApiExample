@@ -9,9 +9,9 @@ using Microsoft.Extensions.Logging;
 
 namespace JsonApi.Controllers
 {
-    public class ParentController : JsonApiController<Parent>
+    public class ParentsController : JsonApiController<Parent>
     {
-        public ParentController(
+        public ParentsController(
             IJsonApiContext jsonApiContext,
             IResourceService<Parent> resourceService,
             ILoggerFactory loggerFactory)
