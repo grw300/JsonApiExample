@@ -1,5 +1,6 @@
 ﻿using System;
 using JsonApiDotNetCore.Models;
+using System.Collections.Generic;
 
 namespace JsonApi.Models
 {
@@ -7,5 +8,8 @@ namespace JsonApi.Models
     {
         [Attr("name")]
         public string Name { get; set; }
+
+        [HasMany("people")]
+        public IEnumerable<Person> People { get; set; }
     }
 }
